@@ -124,8 +124,8 @@ Company: **CodeMield**
 # License
 
 © 2026 CodeMield | All Rights Reserved
+<img width="192" height="192" alt="android-chrome-192x192" src="https://github.com/user-attachments/assets/ebabc55f-aca7-497a-96f6-2aebbb7a33b5" />
 
-<img width="1536" height="1024" alt="ChatGPT Image Mar 7, 2026, 08_36_31 PM" src="https://github.com/user-attachments/assets/67984e34-e245-49d4-a065-4b910c08d91a" />
 
 
 
