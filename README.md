@@ -133,5 +133,11 @@ Company: **CodeMield**
 ![Photo 2_page-0001 jpg](https://github.com/user-attachments/assets/669024a5-4c5e-4e78-8e27-9a7f9a2a2ec5) [organ]
 
 
+[fevicon]
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
 
 
