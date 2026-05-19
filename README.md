@@ -124,20 +124,12 @@ Company: **CodeMield**
 # License
 
 © 2026 CodeMield | All Rights Reserved
-<img width="192" height="192" alt="android-chrome-192x192" src="https://github.com/user-attachments/assets/ebabc55f-aca7-497a-96f6-2aebbb7a33b5" /> [logo]
+
 ![Photo 2_page-0001 jpg](https://github.com/user-attachments/assets/f0a4a184-3052-4c86-a33e-2c96d026a7d0)
 
 
+<img width="3024" height="4032" alt="Arshu jpg" src="https://github.com/user-attachments/assets/163365c6-5117-4c06-90b6-4a92035fe8e4" />
 
-
-![Photo 2_page-0001 jpg](https://github.com/user-attachments/assets/669024a5-4c5e-4e78-8e27-9a7f9a2a2ec5) [organ]
-
-
-[fevicon]
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
 
 
 
