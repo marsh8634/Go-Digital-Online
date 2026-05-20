@@ -167,28 +167,7 @@
 
     /* ---- About ---- */
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1152px; margin: 0 auto; }
-   .avatar-box {
-  width: 16rem;
-  height: 16rem;
-  margin: 0 auto;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  animation: float 6s ease-in-out infinite;
-}
-
-.avatar-box img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-   object-position: center 25%;
-}
-   /* .avatar-box { width: 16rem; height: 16rem; margin: 0 auto; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 1rem; display: flex; align-items: center; justify-content: center; font-size: 5rem; animation: float 6s ease-in-out infinite; }*/
+    .avatar-box { width: 16rem; height: 16rem; margin: 0 auto; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 1rem; display: flex; align-items: center; justify-content: center; font-size: 5rem; animation: float 6s ease-in-out infinite; }
     .about-text { color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem; }
     .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
     .stat-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 0.75rem; padding: 1rem; text-align: center; transition: border-color 0.2s, background 0.2s; }
@@ -410,13 +389,8 @@
     <div class="section-divider reveal"></div>
     <div class="about-grid">
       <div class="reveal">
-  <div class="avatar-box">
-    <img 
-      src="https://github.com/user-attachments/assets/163365c6-5117-4c06-90b6-4a92035fe8e4" 
-      alt="Arsh Profile"
-    >
-  </div>
-</div>
+        <div class="avatar-box">👨‍💻</div>
+      </div>
       <div class="reveal">
         <p class="about-text" id="aboutText">Passionate Java and web developer with experience in building responsive and user-friendly websites. Skilled in Java, JavaScript, React.js, HTML, CSS, Bootstrap, and Tailwind CSS, with a strong interest in creating modern web applications and learning new technologies. Enjoy working on real-world projects, improving problem-solving skills, and building clean and interactive user experiences.</p>
         <div class="stats-grid">
@@ -794,13 +768,37 @@
   });
 
   // --- Form ---
-  document.getElementById('contactForm').addEventListener('submit', (e) => {
+ document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
+
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    const phoneNumber = '918470860187';
+
+    const whatsappMessage = 
+`👋 *New Portfolio Message*
+
+*Name:* ${name}
+*Email:* ${email}
+
+*Message:*
+${message}`;
+
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, '_blank');
+
     const success = document.getElementById('formSuccess');
+    success.style.color = '#25d366';
+    success.textContent = '✓ Redirecting to WhatsApp...';
     success.classList.add('show');
     e.target.reset();
+
     setTimeout(() => success.classList.remove('show'), 3000);
-  });
+});
 
   // --- FIX 3: RGB Glow — dirty flag, no layout read every frame ---
   const mouseGlow = document.getElementById('mouseGlow');
