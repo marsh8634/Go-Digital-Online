@@ -789,11 +789,23 @@ ${message}`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-    window.open(whatsappURL, '_blank');
+    const isMobile = /iPhone|Android|iPad|Mobile/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        window.location.href = whatsappURL;
+    } else {
+        const a = document.createElement('a');
+        a.href = whatsappURL;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
 
     const success = document.getElementById('formSuccess');
     success.style.color = '#25d366';
-    success.textContent = '✓ Redirecting to WhatsApp...';
+    success.textContent = '✓ Opening WhatsApp...';
     success.classList.add('show');
     e.target.reset();
 
